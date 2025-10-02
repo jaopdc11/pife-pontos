@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="/img/espadas.svg" type="image/x-icon">
+    <title>Contador de Pontos</title>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-white mb-2">🎴 Contador de Pontos</h1>
+            <p class="text-gray-400">Some os pontos das partidas fácil e rápido</p>
+        </header>
+
+        <!-- Add Player Form -->l
+        <section class="bg-gray-800 rounded-lg p-6 mb-6">
+            <form class="flex gap-3 flex-col sm:flex-row">
+                <div class="flex-1">
+                    <label for="nome" class="sr-only">Nome do jogador</label>
+                    <input class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500" type="text" id="nome" placeholder="Nome do jogador" autocomplete="off">
+                </div>
+                <button type="submit" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition font-medium whitespace-nowrap">
+                    Adicionar Jogador
+                </button>
+            </form>
+        </section>
+
+        <!-- Players Table -->
+        <section class="bg-gray-800 rounded-lg overflow-hidden">
+            <table class="w-full">
+                <thead class="bg-gray-700">
+                    <tr>
+                        <th class="px-4 py-3 text-left font-semibold min-w-[140px]">Jogador</th>
+                        <th class="px-4 py-3 text-left font-semibold min-w-[120px]">Pontuação</th>
+                        <th class="px-4 py-3 text-left font-semibold min-w-[150px]">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaJogadores" class="divide-y divide-gray-700">
+                    <!-- Linhas serão adicionadas via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-8 text-gray-500 text-sm">
+            <p>Jogue com responsabilidade! 🃏</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
